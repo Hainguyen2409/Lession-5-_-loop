@@ -13,13 +13,26 @@
         //     document.write("The Number is: " + i + "<br>");
         // } BT.1
 
-        let num = parseInt(prompt("Nhập số: "));
-        let total = 0;
-        let i = 1
-        for (; i <= num; i += 1) {
-            total +=i;
-            document.write("The Total is: " + total + "<br>");
+        // let num = parseInt(prompt("Nhập số: "));
+        // let total = 0;
+        // let i = 1
+        // for (; i <= num; i += 1) {
+        //     total +=i;
+        //     document.write("The Total is: " + total + "<br>");
+        // } BT.2
+
+        let sout;
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+            debugger;
+        for (i = 1; i <= 10; i++) {
+            sout = sout + "<tr>";
+            for (j = 1; j <= 10; j++) {
+                sout = sout + "<td>" + i * j + "</td>";
+            }
+            sout = sout + "</tr>";
         }
+        sout = sout + "</table>";
+        console.log(sout);
         </script>
-</body>
+</body>     
 </html>
