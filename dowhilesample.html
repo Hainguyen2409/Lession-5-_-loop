@@ -10,12 +10,21 @@
     
 
     <script>
-        let value = 0;
-        do {
-            value = prompt("Nhập vào số từ 1 đến 10: ");
-        } while (value < 1 || value > 10);
+        // let value = 0;
+        // do {
+        //     value = prompt("Nhập vào số từ 1 đến 10: ");
+        // } while (value < 1 || value > 10);
 
-        alert("Số bạn vừa nhập là: " + value);
+        // alert("Số bạn vừa nhập là: " + value);
+
+        let password = "abc";
+        let input;
+        do{
+            input = prompt("Enter password: ");
+        } while (input !== password);
+        alert("Mở cửa thành công");
+
+
     </script>
 </body>
 </html>

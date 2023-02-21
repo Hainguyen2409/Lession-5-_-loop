@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game đoán số</h1>
+    <button type="button" onclick="playGame()">Play</button>
+
+    <script>
+        function playGame() {
+            let number = parseInt(prompt("Nhập số ngẫu nhiên: "));
+            let randomNumber = Math.floor(Math.random() * number);
+            console.log(randomNumber);
+
+            let checkNumber = parseInt(prompt("Đoán số: "));
+            let count = 0;
+            while (checkNumber !== randomNumber) {
+                count++;
+                if (count == 4) {
+                    alert("Bạn đã hết lượt đoán");
+                } else if (checkNumber < randomNumber) {
+                    alert("Số bạn đoán bé hơn");
+                }else {
+                    alert("Số bạn đoán lớn hơn");
+                }
+                checkNumber = parseInt(prompt("Đoán số: "));
+            }
+            if (count == 4) {
+                alert("Bạn đã hết lượt đoán");
+            } else {
+                alert("bạn đã đoán đúng");
+            }
+        }
+            
+    </script>
+</body>
+</html>
